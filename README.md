@@ -22,7 +22,14 @@ where:<br>
 - $\gamma$: psychrometric constant ($kPa/\degree C$), `can be calculated`
 - ---
 - $C_n, C_d$: they are parameters which can be found in the [Table 8-1](https://doi.org/10.1061/9780784414057) below. For California (e.g., CIMIS), the short-reference parameter is used: $C_n=900, C_d=0.34$
-![alt text](image.png)
+<p align="center">
+<img src="Figures/Table8-1.PNG" width="350" title="Table 8-1">
+</p>
+<p align="center">
+<img src="Figures/PM-ETo.PNG" width="350" title="FAO-56">
+
+<em>Figure 1. Conceptual framework of the Penman-Monteith workflow, which is easy to understand how to use values from meteorological stations for $ET_o$ calculation. 
+</p>
 
 ### Calculation of the slope of the saturation vapor pressure curve ($kPa/\degree C$)
 $$\Delta=\frac{4098~e_s(T)}{(T+237.3)^2}$$
@@ -45,6 +52,9 @@ where:
 - $\lambda$: the latent heat of vaporization, $2.45~MJ/kg$
 - $P$: atmospheric pressure (kPa), `optional input`
 $$P=101.3\times{\frac{293-0.0065\times h}{293}}^{5.26}$$
+- $h$: meters above sea level (m), `required input`
+
+## Hargreaves Method (daily)
 
 ## Reference
 - Task Committee on Revision of Manual 70. (2016, April). Evaporation, evapotranspiration, and irrigation water requirements. American Society of Civil Engineers.
