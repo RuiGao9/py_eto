@@ -11,7 +11,7 @@ where:<br>
 - ---
 - $T$: air temperature at 2 m height ($\degree C$), `required input`
 - $u_2$: wind speed at 2 m height ($m/s$), `required input`
-- $R_n$: net radiation at crop surface ($MJ/m^2/day$), `required input` 
+- $R_n$: net radiation at crop surface ($Wh/m^2/day \cdot 0.0036 = MJ/m^2/day$), `required input` 
 - ---
 - $G$: soil heat flux ($MJ/m^2/day$), usually ~0 for daily time step, `optional input`
 - --- 
@@ -23,7 +23,7 @@ where:<br>
 - ---
 - $C_n, C_d$: they are parameters which can be found in the [Table 8-1](https://doi.org/10.1061/9780784414057) below. For California (e.g., CIMIS), the short-reference parameter is used: $C_n=900, C_d=0.34$
 <p align="center">
-<img src="Figures/Table8-1.PNG" width="350" title="Table 8-1">
+<img src="Figures/Table8-1.png" width="350" title="Table 8-1">
 </p>
 <p align="center">
 <img src="Figures/PM-ETo.PNG" width="350" title="FAO-56">
