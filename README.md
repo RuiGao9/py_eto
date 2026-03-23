@@ -33,6 +33,7 @@ where:<br>
 </p>
 
 ### Calculation of the slope of the saturation vapor pressure curve ($kPa/\degree C$)
+
 $$\Delta=\frac{4098\cdot e_s(T)}{(T+237.3)^2}$$
 
 where:
