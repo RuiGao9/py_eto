@@ -32,7 +32,9 @@ where:<br>
 </p>
 
 ### Calculation of the slope of the saturation vapor pressure curve ($kPa/\degree C$)
+
 $$\Delta=\frac{4098~e_s(T)}{(T+237.3)^2}$$
+
 where:
 - $T$: mean daily air temperature ($\degree C$), `required input`
 - $e_s(T)$: saturation vapor pressure at temperature T ($\degree C$), in $kPa$, `can be calculated` as below
@@ -55,6 +57,7 @@ $$P=101.3\times{\frac{293-0.0065\times h}{293}}^{5.26}$$
 - $h$: meters above sea level (m), `required input`
 
 ## Hargreaves Method (daily)
+
 
 ## Reference
 - Task Committee on Revision of Manual 70. (2016, April). Evaporation, evapotranspiration, and irrigation water requirements. American Society of Civil Engineers.
