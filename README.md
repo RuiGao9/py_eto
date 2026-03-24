@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19197914.svg)](https://doi.org/10.5281/zenodo.19197914)
-![Visitors Badge](https://visitor-badge.laobi.icu/badge?page_id=RuiGao9/****)<br>
+![Visitors Badge](https://visitor-badge.laobi.icu/badge?page_id=RuiGao9/py=et-123)<br>
 
 # A Python Toolkit for Reference Evapotranspiration ($ET_o$) Calculation Directly from Pandas DataFrames
 
@@ -69,7 +69,8 @@ The physical framework remains consistent with the daily step. The difference ar
 - **Diurnal Partitioning via Net Radiation ($R_n$):** The sign and magnitude of $R_n$ are utilized as the primary threshold to differentiate between daytime ($R_n > 0$) and nighttime ($R_n \le 0$) conditions. 
 - **Ground Heat Flux ($G$) as One Optional Input:** The model provides the flexibility to utilize either measured or estimated soil heat flux data. If $G$ is directly monitored (e.g., via heat flux plates), the function prioritizes these observations for higher precision. In the absence of ground measurements, the model automatically estimates $G$ as a dynamic fraction of net radiation ($R_n$), applying distinct scaling factors for daytime and nighttime to capture the diurnal energy exchange between the surface and the subsurface.
  
-## Hargreaves Method (daily)
+
+## Hargreaves Method (Daily)
 
 $$ETo=0.0023 \cdot R_a \cdot (T_{c}+17.8) \cdot \sqrt{T_{max} - T_{min}}$$
 
@@ -79,6 +80,13 @@ where:
 - $T_{min}$: the minimum temperature in that day ($\degree C$)
 - $T_{c}$: $\frac{T_{max}+T_{min}}{2}$ in that day ($\degree C$)
 - $R_a$: extraterrestrial radiation, which can be estimated by latitude and the day of the year, as explained below:
+
+<p align="center">
+<img src="Figures/H-ETo.PNG" width="350" title="Hargreaves">
+
+<em>Figure 2. Conceptual framework of the Hargreaves workflow. </em>
+</p>
+
 $$R_a=\frac{37.6 \cdot d_r \cdot [w_s \cdot sin(\phi_l)sin(\delta) + cos(\phi_l) \cdot sin(w_s)]}{\lambda}$$
 
 $$\delta = 0.4093 \cdot sin(\frac{2 \pi (284+DOY)}{365})$$
@@ -94,12 +102,16 @@ where:
 - $\phi_l$: latitude (rad)
 - $\delta$: declination of the sun (rad) 
 - $\lambda$: latent heat of vvaporization, $\lambda=2.54 MJ/kg$
+
+
 ## Reference
 - Task Committee on Revision of Manual 70. (2016, April). Evaporation, evapotranspiration, and irrigation water requirements. American Society of Civil Engineers.
 - Torres, A. F., Walker, W. R., & McKee, M. (2011). Forecasting daily potential evapotranspiration using machine learning and limited climatic data. Agricultural Water Management, 98(4), 553-562.
 
+
 ## How to cite this work
 Gao, R., Khan, M., & Viers, J. (2026). A Python Toolkit for Reference Evapotranspiration ($ET_o$) Calculation Directly from Pandas DataFrames (Initial). Zenodo. https://doi.org/10.5281/zenodo.19197914
+
 
 ## Repository update information
 - Creation date: 2026-03-20
