@@ -63,7 +63,7 @@ df['ETo_PM_Hourly'] = py_eto.pm_hourly(
 ### Hargreaves-ETo
 Preparing a dataframe and feed it to the `py_eto.hargreaves` funciton:
 ```python
-df['ETo_Hargreaves'] = py_eto.hargreaves(
+df['ETo_Hargreaves'], df['Ra'] = py_eto.hargreaves(
     t_min=df['Tmin'],
     t_max=df['Tmax'],
     latitude=df['Latitude'],
